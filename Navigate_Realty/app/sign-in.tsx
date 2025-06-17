@@ -1,9 +1,34 @@
+import React from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  Alert,
+  Image,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+
+import { login } from "@/lib/appwrite";
+import { Redirect } from "expo-router";
+import { useGlobalContext } from "@/lib/global-provider";
 import icons from "@/constants/icons";
 import images from "@/constants/images";
-import { ScrollView, Text, TouchableOpacity, View, Image } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 const SignIn = () => {
+  const { refetch, loading, isLogged } = useGlobalContext();
+
+  if (!loading && isLogged) return <Redirect href="/" />;
+
+  const handleLogin = async () => {
+    const result = await login();
+    if (result) {
+      refetch();
+    } else {
+      Alert.alert("Error", "Failed to login");
+    }
+  };
+
   return (
     <SafeAreaView className="bg-white h-full">
       <ScrollView
@@ -19,7 +44,7 @@ const SignIn = () => {
 
         <View className="px-10">
           <Text className="text-base text-center uppercase font-rubik text-black-200">
-            Welcome To Real Scout
+            Welcome To Navigate Realty
           </Text>
 
           <Text className="text-3xl font-rubik-bold text-black-300 text-center mt-2">
@@ -28,11 +53,11 @@ const SignIn = () => {
           </Text>
 
           <Text className="text-lg font-rubik text-black-200 text-center mt-12">
-            Login to Real Scout with Google
+            Login to Navigate Realty with Google
           </Text>
 
           <TouchableOpacity
-            // onPress={handleLogin}
+            onPress={handleLogin}
             className="bg-white shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5"
           >
             <View className="flex flex-row items-center justify-center">
