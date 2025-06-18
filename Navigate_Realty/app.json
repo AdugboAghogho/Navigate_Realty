@@ -30,7 +30,7 @@
         {
           "image": "./assets/NR-logo1.svg",
           "resizeMode": "cover",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#0000",
           "enableFullScreenImage_legacy": true
         }
       ],
