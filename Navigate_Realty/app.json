@@ -14,7 +14,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/NR-logo2.svg",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0000"
       },
       "edgeToEdgeEnabled": true
     },
