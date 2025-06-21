@@ -13,8 +13,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/NR-logo2.svg",
-        "backgroundColor": "#0000"
+        "foregroundImage": "./assets/NR-logo1.svg",
+        "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true
     },
@@ -30,7 +30,7 @@
         {
           "image": "./assets/NR-logo1.svg",
           "resizeMode": "cover",
-          "backgroundColor": "#0000",
+          "backgroundColor": "#ffffff",
           "enableFullScreenImage_legacy": true
         }
       ],
