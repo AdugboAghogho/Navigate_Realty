@@ -14,7 +14,7 @@ import { Card, FeaturedCard } from "@/components/Cards";
 import NoResults from "@/components/NoResults";
 import { useAppwrite } from "@/lib/useAppwrite";
 import { getLatestProperties, getProperties } from "@/lib/appwrite";
-import Filters from "@/components/Filters";
+// import Filters from "@/components/Filters";
 import icons from "@/constants/icons";
 
 const AllProperties = () => {
@@ -59,8 +59,8 @@ const AllProperties = () => {
           <Text className="text-2xl font-rubik-bold text-black-300">
             Found {properties?.length} Properties
           </Text>
-    
-          <Filters />
+
+          {/* <Filters /> */}
         </View>
 
         {loading ? (

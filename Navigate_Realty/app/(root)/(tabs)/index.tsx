@@ -142,7 +142,7 @@ const Home = () => {
                   Our Recommendation
                 </Text>
                 <TouchableOpacity
-                  onPress={() => router.push("/explore")}
+                  onPress={() => router.push("/properties/all")}
                 >
                   <Text className="text-base font-rubik-bold text-primary-300">
                     See all
