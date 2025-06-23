@@ -160,3 +160,4 @@ const Home = () => {
 };
 
 export default Home;
+// eas build -p android --profile preview
